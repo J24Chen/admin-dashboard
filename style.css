@@ -1,0 +1,253 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+:root{
+    --primary-color:#9333ea;
+    --secondary-color:#38bdf8;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: "Lexend", sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr;
+    grid-template-rows: 1fr 5fr;
+    max-height: 100vh;
+}
+
+
+.title {
+    display:grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+    justify-content: center;
+    margin-left:20px;   
+}
+
+.page-logo {
+    width:4rem;
+}
+
+.sidenav{
+    grid-row: 1 / span 3;
+    grid-column: 1;
+    display:grid;
+    grid-template-rows: 80px 4fr;
+    background-color: var(--primary-color);
+    gap:4rem;
+}
+ul {
+    position:sticky;
+    list-style-type: none;
+}
+
+.sidenav ul {
+    padding-left: 2rem;
+}
+.sidenav ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.sidenav ul li img {
+    width: 2rem;
+    position: relative;
+
+}
+
+.separator {
+    border: 1px solid #000;
+    margin-top: 1.5rem;
+    margin-bottom:1.5rem;
+    margin-right: 1rem;
+}
+
+#home-img {
+    top:6px;
+}
+
+ul li a {
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    font-weight:600;
+    font-size:1.25rem;
+}
+
+
+ul li a:hover {
+    color:var(--secondary-color)
+}
+
+.search {
+    display:flex;
+    align-items: center;
+    justify-content: end;
+    margin-right:4rem;
+}
+
+.search-logo{
+    width:1.6rem;
+}
+
+.search input {
+    border-radius: 5px;
+    outline:none;
+    background-color: rgb(243, 236, 236);
+    height:40px;
+    flex: 1;
+    max-width: 400px;
+}
+
+.header{
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    padding:3rem;
+    align-items: center;
+    box-shadow: 1px 7px 6px 0px rgba(152,152,152,0.76); 
+}
+
+.header .profile {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+.pfp {
+    width:4rem;
+    border:2px var(--secondary-color) solid;
+    border-radius: 60%;
+    height:fit-content;
+    margin-right: 1rem;
+}
+
+
+.header li {
+    display:inline;
+    margin-right:2rem;
+    
+}
+
+.header a {
+    color:rgb(0, 0, 0);
+}
+
+
+.main {
+    grid-column: 2;
+    grid-row:2;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 2rem 0 0 2rem;
+    background-color: rgb(241 245 249);
+}
+
+
+.project {
+    grid-row: 1/ span 2;
+    margin-right:1.5rem;
+    max-height: fit-content;
+}
+
+.project h2 ,
+.announcement h2,
+.trending h2{
+    margin-bottom: 1rem;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 1px 7px 6px 0px rgba(152,152,152,0.76); 
+    background-color: #fff;
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap:30px;
+}
+
+.project-card {
+    height:300px;
+    border-radius: 10px;
+    border-left:8px var(--secondary-color) solid;
+    position: relative;
+}
+.project-text {
+    margin-left: 1rem;
+    margin-top: 2rem;
+}
+.project-card .icon-container {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    
+}
+.project-card .icon {
+    width:1.5rem;
+    margin-right: 30px;
+}
+
+.project-card .icon:hover{
+    cursor:pointer;
+    width:2rem;
+}
+
+.announcement{
+    max-height: fit-content;
+}
+.announcement-card {
+    border: 1px solid #000;
+    margin-right: 1rem;
+}
+
+.announcement-text {
+    padding:10px;
+    
+}
+.announcement-text h4{
+    font-size: 1rem;
+}
+
+.announcement-text p {
+    font-size: 0.85rem;
+    padding:2px;
+
+    display: block;/* or inline-block */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-height: 3.3em;
+    line-height: 1em;
+    color:rgb(104, 103, 103);
+}
+
+.announcement-separator {
+    border: 1px solid #000;
+    margin: 0 1rem 0 1rem;
+}
+
+.trending {
+    max-height: fit-content;
+}
+.trending-card{
+    margin-right:1rem;
+    border-radius: 10px;
+    padding:10px;
+}
+
+.user {
+    margin-bottom:0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.text p {
+    color:rgb(104, 103, 103);
+}
